@@ -1,85 +1,508 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>KOPILI STORIES</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-    background:#ffffff;
-    color:#111111;
-    font-family:Helvetica,Arial,sans-serif;
+
+background:#111;
+color:#f4f4f4;
+
+font-family:Inter,sans-serif;
+
+overflow-x:hidden;
+
 }
+
+
+/* ---------------- NAVIGATION ---------------- */
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:28px 60px;
+
+z-index:100;
+
+background:linear-gradient(to bottom,rgba(0,0,0,.55),transparent);
+
+backdrop-filter:blur(3px);
+
+}
+
+.logo{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:34px;
+
+letter-spacing:4px;
+
+font-weight:500;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:45px;
+
+list-style:none;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+transition:.35s;
+
+}
+
+nav a:hover{
+
+opacity:.65;
+
+}
+
+
+/* ---------------- HERO ---------------- */
 
 .hero{
-    width:100%;
-    height:100vh;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+position:relative;
 
-    text-align:center;
+height:100vh;
 
-    padding:40px;
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+overflow:hidden;
+
 }
 
-h1{
-    font-size:72px;
-    letter-spacing:10px;
-    font-weight:300;
+.hero img{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+animation:zoom 24s ease-in-out infinite alternate;
+
 }
 
-h2{
-    margin-top:30px;
-    font-size:48px;
-    font-weight:400;
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(to bottom,
+
+rgba(0,0,0,.35),
+
+rgba(0,0,0,.45),
+
+rgba(0,0,0,.75));
+
+z-index:1;
+
 }
 
-p{
+.hero-content{
 
-    margin-top:30px;
+position:relative;
 
-    max-width:700px;
+z-index:5;
 
-    font-size:20px;
+max-width:900px;
 
-    line-height:1.7;
+padding:40px;
 
-    color:#555;
+animation:fade 2.2s;
+
+}
+
+.hero h1{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:100px;
+
+font-weight:400;
+
+letter-spacing:2px;
+
+margin-bottom:15px;
+
+}
+
+.hero h2{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:56px;
+
+font-weight:300;
+
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+line-height:1.8;
+
+max-width:720px;
+
+margin:auto;
+
+color:#ddd;
+
 }
 
 .button{
 
-margin-top:60px;
+display:inline-block;
 
-padding:16px 42px;
+margin-top:45px;
 
-border:1px solid black;
+padding:15px 38px;
+
+border:1px solid rgba(255,255,255,.45);
+
+color:white;
 
 text-decoration:none;
 
-color:black;
+letter-spacing:2px;
 
-transition:.3s;
+text-transform:uppercase;
+
+font-size:13px;
+
+transition:.35s;
 
 }
 
 .button:hover{
 
-background:black;
+background:white;
+
+color:black;
+
+}
+
+.scroll{
+
+position:absolute;
+
+bottom:40px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+z-index:10;
+
+font-size:30px;
+
+opacity:.8;
+
+animation:bounce 2s infinite;
+
+}
+
+
+/* ---------------- SECTION ---------------- */
+
+section{
+
+padding:140px 10%;
+
+}
+
+.section-title{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:70px;
+
+font-weight:400;
+
+margin-bottom:40px;
+
+}
+
+.lead{
+
+font-size:22px;
+
+line-height:2;
+
+max-width:900px;
+
+color:#d5d5d5;
+
+}
+
+
+/* ---------------- FEATURE ---------------- */
+
+.feature{
+
+display:grid;
+
+grid-template-columns:1.2fr 1fr;
+
+gap:70px;
+
+align-items:center;
+
+}
+
+.feature img{
+
+width:100%;
+
+display:block;
+
+}
+
+.feature h3{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:70px;
+
+font-weight:400;
+
+margin-bottom:25px;
+
+}
+
+.feature p{
+
+font-size:19px;
+
+line-height:2;
+
+color:#ccc;
+
+}
+
+
+/* ---------------- FOOTER ---------------- */
+
+footer{
+
+padding:80px 10%;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+text-align:center;
+
+}
+
+footer h2{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:44px;
+
+margin-bottom:20px;
+
+font-weight:400;
+
+}
+
+footer p{
+
+color:#bbb;
+
+margin-bottom:15px;
+
+}
+
+footer a{
 
 color:white;
+
+text-decoration:none;
+
+}
+
+
+/* ---------------- ANIMATION ---------------- */
+
+@keyframes zoom{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.06);
+
+}
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translate(-50%,0);
+
+}
+
+50%{
+
+transform:translate(-50%,10px);
+
+}
+
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:900px){
+
+nav{
+
+padding:22px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+.logo{
+
+font-size:28px;
+
+}
+
+.hero h1{
+
+font-size:54px;
+
+}
+
+.hero h2{
+
+font-size:34px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.section-title{
+
+font-size:48px;
+
+}
+
+.feature{
+
+grid-template-columns:1fr;
+
+}
+
+.feature h3{
+
+font-size:46px;
+
+}
 
 }
 
@@ -89,7 +512,27 @@ color:white;
 
 <body>
 
-<section class="hero">
+<nav>
+
+<div class="logo">KOPILI STORIES</div>
+
+<ul>
+
+<li><a href="#films">Films</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<header class="hero">
+
+<img src="hero.jpg" alt="Kaldia">
+
+<div class="hero-content">
 
 <h1>KOPILI STORIES</h1>
 
@@ -97,17 +540,113 @@ color:white;
 
 <p>
 
-An independent film studio based in Assam, India, dedicated to creating thoughtful cinema rooted in human stories.
+Independent cinema from Assam exploring memory,
+mythology, science and forgotten histories.
 
 </p>
 
-<a class="button" href="#">
+<a href="#" class="button">
 
-Official Trailer Coming Soon
+Official Trailer →
 
 </a>
 
+</div>
+
+<div class="scroll">
+
+↓
+
+</div>
+
+</header>
+
+<section id="about">
+
+<h2 class="section-title">
+
+Stories rooted in Assam.
+
+</h2>
+
+<p class="lead">
+
+KOPILI STORIES is an independent film studio dedicated
+to creating thoughtful cinema where archaeology,
+memory, mythology and science quietly intersect.
+Our films seek wonder in forgotten places and ask
+questions that linger long after the credits roll.
+
+</p>
+
 </section>
+
+<section id="films">
+
+<div class="feature">
+
+<img src="hero.jpg">
+
+<div>
+
+<h3>
+
+কালদিয়া
+
+</h3>
+
+<p>
+
+An archaeology student begins investigating a forgotten
+temple in rural Assam, only to discover that the mysteries
+buried beneath its ruins may reach far beyond recorded
+history... and perhaps even beyond time itself.
+
+</p>
+
+<br>
+
+<a href="#" class="button">
+
+Watch Trailer →
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer id="contact">
+
+<h2>
+
+KOPILI STORIES
+
+</h2>
+
+<p>
+
+Independent Cinema from Assam
+
+</p>
+
+<p>
+
+admin@kopilistories.com
+
+</p>
+
+<br>
+
+<p>
+
+© 2026 KOPILI STORIES
+
+</p>
+
+</footer>
 
 </body>
 
