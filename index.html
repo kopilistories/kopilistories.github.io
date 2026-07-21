@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -10,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 
@@ -26,8 +27,9 @@ scroll-behavior:smooth;
 
 body{
 
-background:#111;
-color:#f4f4f4;
+background:#0d0d0d;
+
+color:#f5f3ef;
 
 font-family:Inter,sans-serif;
 
@@ -35,81 +37,7 @@ overflow-x:hidden;
 
 }
 
-
-/* ---------------- NAVIGATION ---------------- */
-
-nav{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:28px 60px;
-
-z-index:100;
-
-background:linear-gradient(to bottom,rgba(0,0,0,.55),transparent);
-
-backdrop-filter:blur(3px);
-
-}
-
-.logo{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:34px;
-
-letter-spacing:4px;
-
-font-weight:500;
-
-}
-
-nav ul{
-
-display:flex;
-
-gap:45px;
-
-list-style:none;
-
-}
-
-nav a{
-
-text-decoration:none;
-
-color:white;
-
-font-size:13px;
-
-letter-spacing:2px;
-
-text-transform:uppercase;
-
-transition:.35s;
-
-}
-
-nav a:hover{
-
-opacity:.65;
-
-}
-
-
-/* ---------------- HERO ---------------- */
+/* HERO */
 
 .hero{
 
@@ -117,15 +45,13 @@ position:relative;
 
 height:100vh;
 
+overflow:hidden;
+
 display:flex;
 
 align-items:center;
 
-justify-content:center;
-
-text-align:center;
-
-overflow:hidden;
+padding-left:8vw;
 
 }
 
@@ -133,13 +59,15 @@ overflow:hidden;
 
 position:absolute;
 
+inset:0;
+
 width:100%;
 
 height:100%;
 
 object-fit:cover;
 
-animation:zoom 24s ease-in-out infinite alternate;
+animation:zoom 28s ease-in-out infinite alternate;
 
 }
 
@@ -153,69 +81,81 @@ inset:0;
 
 background:
 
-linear-gradient(to bottom,
+linear-gradient(to right,
+
+rgba(0,0,0,.72),
 
 rgba(0,0,0,.35),
 
-rgba(0,0,0,.45),
-
-rgba(0,0,0,.75));
+rgba(0,0,0,.25));
 
 z-index:1;
 
 }
 
-.hero-content{
+.content{
 
 position:relative;
 
 z-index:5;
 
-max-width:900px;
+max-width:650px;
 
-padding:40px;
-
-animation:fade 2.2s;
+animation:fade 2s;
 
 }
 
-.hero h1{
+.logo{
+
+font-size:14px;
+
+letter-spacing:5px;
+
+text-transform:uppercase;
+
+opacity:.8;
+
+margin-bottom:80px;
+
+}
+
+.title{
 
 font-family:"Cormorant Garamond",serif;
 
-font-size:100px;
+font-size:110px;
 
 font-weight:400;
 
-letter-spacing:2px;
+line-height:.95;
 
-margin-bottom:15px;
+margin-bottom:10px;
 
 }
 
-.hero h2{
+.subtitle{
 
 font-family:"Cormorant Garamond",serif;
 
-font-size:56px;
+font-size:42px;
 
 font-weight:300;
 
-margin-bottom:25px;
+margin-bottom:50px;
 
 }
 
-.hero p{
+.quote{
 
-font-size:18px;
+font-size:22px;
 
-line-height:1.8;
+line-height:2;
 
-max-width:720px;
+font-weight:300;
 
-margin:auto;
+color:#d9d3ca;
 
-color:#ddd;
+max-width:520px;
 
 }
 
@@ -223,11 +163,11 @@ color:#ddd;
 
 display:inline-block;
 
-margin-top:45px;
+margin-top:60px;
 
-padding:15px 38px;
+padding:15px 35px;
 
-border:1px solid rgba(255,255,255,.45);
+border:1px solid rgba(255,255,255,.4);
 
 color:white;
 
@@ -237,7 +177,7 @@ letter-spacing:2px;
 
 text-transform:uppercase;
 
-font-size:13px;
+font-size:12px;
 
 transition:.35s;
 
@@ -255,32 +195,29 @@ color:black;
 
 position:absolute;
 
-bottom:40px;
+bottom:35px;
 
 left:50%;
 
 transform:translateX(-50%);
 
+font-size:28px;
+
 z-index:10;
 
-font-size:30px;
-
-opacity:.8;
-
-animation:bounce 2s infinite;
+opacity:.7;
 
 }
 
-
-/* ---------------- SECTION ---------------- */
+/* SECTIONS */
 
 section{
 
-padding:140px 10%;
+padding:180px 10%;
 
 }
 
-.section-title{
+h2{
 
 font-family:"Cormorant Garamond",serif;
 
@@ -288,101 +225,57 @@ font-size:70px;
 
 font-weight:400;
 
-margin-bottom:40px;
+margin-bottom:45px;
 
 }
 
-.lead{
+p{
 
-font-size:22px;
+font-size:20px;
 
-line-height:2;
+line-height:2.05;
 
 max-width:900px;
 
-color:#d5d5d5;
+color:#d2d2d2;
 
 }
 
+.about{
 
-/* ---------------- FEATURE ---------------- */
-
-.feature{
-
-display:grid;
-
-grid-template-columns:1.2fr 1fr;
-
-gap:70px;
-
-align-items:center;
+background:#111;
 
 }
 
-.feature img{
-
-width:100%;
-
-display:block;
-
-}
-
-.feature h3{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:70px;
-
-font-weight:400;
-
-margin-bottom:25px;
-
-}
-
-.feature p{
-
-font-size:19px;
-
-line-height:2;
-
-color:#ccc;
-
-}
-
-
-/* ---------------- FOOTER ---------------- */
-
-footer{
-
-padding:80px 10%;
-
-border-top:1px solid rgba(255,255,255,.08);
+.footer{
 
 text-align:center;
 
+padding:120px 10%;
+
+border-top:1px solid rgba(255,255,255,.08);
+
 }
 
-footer h2{
+.footer h3{
 
 font-family:"Cormorant Garamond",serif;
 
-font-size:44px;
-
-margin-bottom:20px;
+font-size:42px;
 
 font-weight:400;
 
-}
-
-footer p{
-
-color:#bbb;
-
-margin-bottom:15px;
+margin-bottom:20px;
 
 }
 
-footer a{
+.footer p{
+
+margin:auto;
+
+}
+
+.footer a{
 
 color:white;
 
@@ -390,8 +283,7 @@ text-decoration:none;
 
 }
 
-
-/* ---------------- ANIMATION ---------------- */
+/* ANIMATION */
 
 @keyframes zoom{
 
@@ -429,78 +321,35 @@ transform:none;
 
 }
 
-@keyframes bounce{
-
-0%,100%{
-
-transform:translate(-50%,0);
-
-}
-
-50%{
-
-transform:translate(-50%,10px);
-
-}
-
-}
-
-
-/* ---------------- MOBILE ---------------- */
-
 @media(max-width:900px){
 
-nav{
+.hero{
 
-padding:22px;
-
-}
-
-nav ul{
-
-display:none;
+padding:40px;
 
 }
 
-.logo{
+.title{
+
+font-size:60px;
+
+}
+
+.subtitle{
 
 font-size:28px;
 
 }
 
-.hero h1{
+.quote{
 
-font-size:54px;
-
-}
-
-.hero h2{
-
-font-size:34px;
+font-size:18px;
 
 }
 
-.hero p{
+h2{
 
-font-size:16px;
-
-}
-
-.section-title{
-
-font-size:48px;
-
-}
-
-.feature{
-
-grid-template-columns:1fr;
-
-}
-
-.feature h3{
-
-font-size:46px;
+font-size:44px;
 
 }
 
@@ -512,42 +361,44 @@ font-size:46px;
 
 <body>
 
-<nav>
-
-<div class="logo">KOPILI STORIES</div>
-
-<ul>
-
-<li><a href="#films">Films</a></li>
-
-<li><a href="#about">About</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
 <header class="hero">
 
 <img src="hero.jpg" alt="Kaldia">
 
-<div class="hero-content">
+<div class="content">
 
-<h1>KOPILI STORIES</h1>
+<div class="logo">
 
-<h2>কালদিয়া</h2>
+KOPILI STORIES
 
-<p>
+</div>
 
-Independent cinema from Assam exploring memory,
-mythology, science and forgotten histories.
+<div class="title">
 
-</p>
+কালদিয়া
 
-<a href="#" class="button">
+</div>
+
+<div class="subtitle">
+
+KALDIA
+
+</div>
+
+<div class="quote">
+
+The river remembers.<br>
+
+The forest waits.<br>
+
+Someone is expected to return.
+
+</div>
+
+<a class="button" href="#">
 
 Official Trailer →
+
 
 </a>
 
@@ -561,70 +412,45 @@ Official Trailer →
 
 </header>
 
-<section id="about">
-
-<h2 class="section-title">
-
-Stories rooted in Assam.
-
-</h2>
-
-<p class="lead">
-
-KOPILI STORIES is an independent film studio dedicated
-to creating thoughtful cinema where archaeology,
-memory, mythology and science quietly intersect.
-Our films seek wonder in forgotten places and ask
-questions that linger long after the credits roll.
-
-</p>
-
-</section>
-
-<section id="films">
-
-<div class="feature">
-
-<img src="hero.jpg">
-
-<div>
-
-<h3>
-
-কালদিয়া
-
-</h3>
-
-<p>
-
-An archaeology student begins investigating a forgotten
-temple in rural Assam, only to discover that the mysteries
-buried beneath its ruins may reach far beyond recorded
-history... and perhaps even beyond time itself.
-
-</p>
-
-<br>
-
-<a href="#" class="button">
-
-Watch Trailer →
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<footer id="contact">
+<section class="about">
 
 <h2>
 
-KOPILI STORIES
+About the Film
 
 </h2>
+
+<p>
+
+Set against the landscapes of rural Assam, <em>Kaldia</em> is a quiet mystery where scientific curiosity and ancient memory begin to converge. As unusual celestial events and unexplained seismic activity unsettle an entire region, forgotten places and fragments of the past slowly reveal that some stories are older than history itself.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>
+
+About KOPILI STORIES
+
+</h2>
+
+<p>
+
+KOPILI STORIES is an independent film studio based in Assam, India, dedicated to creating thoughtful cinema rooted in landscape, memory and human curiosity. Our films draw inspiration from mythology, science, oral traditions and the unseen connections between people, place and time.
+
+</p>
+
+</section>
+
+<footer class="footer">
+
+<h3>
+
+KOPILI STORIES
+
+</h3>
 
 <p>
 
@@ -632,13 +458,19 @@ Independent Cinema from Assam
 
 </p>
 
+<br>
+
 <p>
+
+<a href="mailto:admin@kopilistories.com">
 
 admin@kopilistories.com
 
+</a>
+
 </p>
 
-<br>
+<br><br>
 
 <p>
 
