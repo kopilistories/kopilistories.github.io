@@ -317,4 +317,703 @@ footer {
 
     }
 
+
+
+   /* =====================================================
+   KALDIYA 2 — PROJECT PAGE
+===================================================== */
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.k2-topbar {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 20;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 28px 40px;
+
+    font-size: .75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+
+.k2-topbar a {
+
+    color: inherit;
+    text-decoration: none;
+
+    transition: opacity .3s ease;
+
+}
+
+.k2-topbar a:hover {
+
+    opacity: .5;
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.k2-hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.35),
+            rgba(0,0,0,.55)
+        ),
+        #111;
+
+    overflow: hidden;
+
+}
+
+.k2-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("images/kaldiya-2/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    z-index: 0;
+
+}
+
+.k2-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding: 40px;
+
+}
+
+.k2-eyebrow {
+
+    font-size: .75rem;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+
+    opacity: .8;
+
+}
+
+.k2-hero h1 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 6rem;
+
+    font-weight: 400;
+
+    letter-spacing: 5px;
+
+    margin: 0 0 20px;
+
+}
+
+.k2-subtitle {
+
+    font-size: 1rem;
+
+    font-weight: 300;
+
+    letter-spacing: 2px;
+
+}
+
+.k2-scroll {
+
+    display: inline-block;
+
+    margin-top: 100px;
+
+    color: white;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    font-size: .7rem;
+
+    opacity: .75;
+
+    transition: opacity .3s ease;
+
+}
+
+.k2-scroll:hover {
+
+    opacity: 1;
+
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.k2-section-inner {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 130px 50px;
+
+}
+
+.k2-label {
+
+    font-size: .7rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    color: #777;
+
+    margin-bottom: 25px;
+
+}
+
+.k2-section h2,
+.k2-world h2,
+.k2-light h2,
+.k2-science h2,
+.k2-production h2,
+.k2-partnership h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 4rem;
+
+    line-height: 1.1;
+
+    font-weight: 400;
+
+    margin-bottom: 45px;
+
+}
+
+.k2-text {
+
+    max-width: 720px;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+}
+
+.k2-text p {
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================
+   THE WORLD
+========================= */
+
+.k2-world {
+
+    min-height: 80vh;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    background: #f4f2ee;
+
+}
+
+.k2-world::before {
+
+    content: "";
+
+    min-height: 80vh;
+
+    background-image:
+        url("images/kaldiya-2/winter.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+.k2-world-text {
+
+    padding: 100px 80px;
+
+}
+
+
+/* =========================
+   WINTER LIGHT
+========================= */
+
+.k2-light {
+
+    background: #ffffff;
+
+}
+
+.k2-light .k2-text {
+
+    margin-bottom: 80px;
+
+}
+
+
+/* =========================
+   CHARACTERS
+========================= */
+
+.k2-characters {
+
+    background: #f7f7f7;
+
+}
+
+.k2-character-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1px;
+
+    margin-top: 80px;
+
+    background: #ddd;
+
+}
+
+.k2-character {
+
+    background: #f7f7f7;
+
+    padding: 50px;
+
+    min-height: 250px;
+
+}
+
+.k2-character h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2.3rem;
+
+    font-weight: 400;
+
+    margin-bottom: 20px;
+
+}
+
+.k2-character p {
+
+    max-width: 420px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================
+   TRILOGY
+========================= */
+
+.k2-trilogy {
+
+    background: #111;
+
+    color: white;
+
+}
+
+.k2-trilogy .k2-label {
+
+    color: #999;
+
+}
+
+.k2-trilogy-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 60px;
+
+    margin-top: 70px;
+
+}
+
+.k2-trilogy-grid span {
+
+    font-size: .7rem;
+
+    letter-spacing: 3px;
+
+    color: #888;
+
+}
+
+.k2-trilogy-grid h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2.5rem;
+
+    font-weight: 400;
+
+    margin: 15px 0;
+
+}
+
+.k2-trilogy-grid p {
+
+    color: #aaa;
+
+    font-size: .85rem;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================
+   SCIENCE
+========================= */
+
+.k2-science {
+
+    background: #f4f2ee;
+
+}
+
+.k2-scientists {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 80px;
+
+    margin-top: 90px;
+
+    padding-top: 50px;
+
+    border-top: 1px solid #ccc;
+
+}
+
+.k2-scientists h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2rem;
+
+    font-weight: 400;
+
+    margin-bottom: 15px;
+
+}
+
+.k2-scientists p {
+
+    font-size: .9rem;
+
+    color: #666;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================
+   PRODUCTION
+========================= */
+
+.k2-production {
+
+    background: #ffffff;
+
+}
+
+.k2-production-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+
+    margin-top: 70px;
+
+}
+
+.k2-production-grid div {
+
+    padding-top: 20px;
+
+    border-top: 1px solid #ccc;
+
+}
+
+.k2-production-grid span {
+
+    display: block;
+
+    font-size: .7rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #777;
+
+    margin-bottom: 10px;
+
+}
+
+.k2-production-grid strong {
+
+    font-weight: 400;
+
+}
+
+
+/* =========================
+   PARTNERSHIP
+========================= */
+
+.k2-partnership {
+
+    background: #111;
+
+    color: white;
+
+    text-align: center;
+
+}
+
+.k2-partnership .k2-section-inner {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+.k2-partnership .k2-label {
+
+    color: #999;
+
+}
+
+.k2-partnership .k2-text {
+
+    margin-bottom: 45px;
+
+}
+
+.k2-partnership .button {
+
+    color: white;
+
+    border-color: white;
+
+}
+
+.k2-partnership .button:hover {
+
+    background: white;
+
+    color: #111;
+
+}
+
+
+/* =========================
+   KALDIYA 2 FOOTER
+========================= */
+
+body:has(.k2-hero) footer {
+
+    background: #111;
+
+    color: #777;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .k2-hero h1 {
+
+        font-size: 4.5rem;
+
+    }
+
+    .k2-section-inner {
+
+        padding: 100px 35px;
+
+    }
+
+    .k2-section h2,
+    .k2-world h2,
+    .k2-light h2,
+    .k2-science h2,
+    .k2-production h2,
+    .k2-partnership h2 {
+
+        font-size: 3.2rem;
+
+    }
+
+    .k2-world {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .k2-world::before {
+
+        min-height: 60vh;
+
+    }
+
+    .k2-world-text {
+
+        padding: 80px 35px;
+
+    }
+
+    .k2-production-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .k2-topbar {
+
+        padding: 22px 20px;
+
+    }
+
+    .k2-hero h1 {
+
+        font-size: 3.2rem;
+
+        letter-spacing: 3px;
+
+    }
+
+    .k2-section-inner {
+
+        padding: 80px 25px;
+
+    }
+
+    .k2-section h2,
+    .k2-world h2,
+    .k2-light h2,
+    .k2-science h2,
+    .k2-production h2,
+    .k2-partnership h2 {
+
+        font-size: 2.6rem;
+
+    }
+
+    .k2-character-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .k2-trilogy-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+    .k2-scientists {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+    .k2-production-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
 }
